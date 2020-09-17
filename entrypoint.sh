@@ -1,4 +1,7 @@
 #!/bin/bash
 
-inclusivelint $GITHUB_WORKSPACE >> /output.txt
-cat output.txt
+ls /github/home
+ls /github/workspace
+ls /github/workflow
+
+inclusivelint $GITHUB_WORKSPACE
