@@ -6,7 +6,7 @@ inputs:
     required: true
     default: 'World'
 outputs:
-  time: # id of output
+  time: 
     description: 'The time we greeted you'
 runs:
   using: 'docker'

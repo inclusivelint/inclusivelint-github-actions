@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo "Hello Github Action!"
+time=$(date)
+echo "::set-output name=time::$time"
+
+inclusivelint $GITHUB_WORKSPACE
