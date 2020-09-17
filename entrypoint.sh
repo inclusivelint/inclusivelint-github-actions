@@ -1,6 +1,4 @@
 #!/bin/bash
 
-time=$(date)
-echo "::set-output name=time::$time"
-
-inclusivelint $GITHUB_WORKSPACE
+inclusivelint $GITHUB_WORKSPACE >> /output.txt
+cat output.txt
