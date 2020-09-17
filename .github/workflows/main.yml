@@ -11,8 +11,6 @@ jobs:
       - name: Test action step
         uses: ./
         id: test
-        with:
-          who-to-greet: 'Mona the Octocat'
       
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
