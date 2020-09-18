@@ -1,8 +1,5 @@
 name: 'Inclusivelint Github Action'
 description: 'Github action that finds non inclusive words on a repository'
-outputs:
-  time: 
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
