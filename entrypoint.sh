@@ -8,6 +8,6 @@ echo "FLOW"
 ls /github/workflow
 echo $GITHUB_SHA
 echo "DOCKER CONTAINER"
-ls /root
+ls -la /root
 
 inclusivelint $GITHUB_WORKSPACE
