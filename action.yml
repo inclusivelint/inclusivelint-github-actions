@@ -3,3 +3,6 @@ description: 'Github action that finds non inclusive words on a repository'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+branding:
+    icon: 'check'
+    color: 'blue'
