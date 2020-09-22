@@ -11,3 +11,6 @@ jobs:
       - name: Run inclusivelint
         uses: ./
         id: inclusivelint
+
+      - name: Run inclusivelint from Marketplace
+        uses: 'inclusivelint/inclusivelint-github-actions@0.0.1'
