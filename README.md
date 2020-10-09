@@ -55,3 +55,16 @@ jobs:
 In this case, the yaml is using the public action from github marketplace. It runs
 exactly like the private one, the difference is that you don't need to have the action
 code the repo you want to run inclusivelint.
+
+## Contributing
+
+Contributions are more then welcome in this repository.
+If you experience some bugs or there are some features you'd like to have as part of the tool,
+please feel free to open an issue describing the situation to us.
+
+If you want to open a PR, the suggested way of doing this is the following:
+
+1. Fork this repository
+2. Clone the fork
+3. Create a branch on the fork with a name that follows the pattern <github_user>/<new_feature>
+4. Once the work is done, feel free to open a PR to the main branch of this repo
