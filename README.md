@@ -6,6 +6,21 @@ This repo aims to make it easier for users to run the [inclusivelint](https://gi
 project as part of your github action pipeline. It follows the official Github guidance to create a Docker action
 that can be found [here](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action).
 
+There are two optional files the users could add to extend inclusivelint functionality:
+
+1. additionalwords
+1. inclusivelintignore
+
+These files should be placed in the `/inclusivelint` folder in the root of the project.
+
+### additionalwords
+
+`additionalwords` will add new words to the current dictionary, so the users could include their own words to be checked in the project.
+
+### inclusivelintignore
+
+`inclusivelintignore` will ignore words in the `inclusivelint` dictionary as per user request.
+
 ## Using it as part of the pipeline (private action)
 
 To use it as part of you github pipeline, you can follow the example we have as the action for this repository, which
@@ -21,7 +36,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
+
       - name: Run inclusivelint
         uses: ./
         id: inclusivelint
@@ -30,7 +45,7 @@ jobs:
 The yaml show how its like to run on a ubuntu machine every time a code is push to the
 remote. The pipeline will always need to do the checkout action, this way the step will
 have the code that is on the repo (which will be located on the $GITHUB_WORKSPACE).
-Once the repo is cloned, the action will run on all the repo. 
+Once the repo is cloned, the action will run on all the repo.
 
 ## Using it as part of the pipeline (public action from github action)
 
@@ -47,7 +62,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
+
       - name: Run inclusivelint from Marketplace
         uses: 'inclusivelint/inclusivelint-github-actions@0.0.1'
 ```
