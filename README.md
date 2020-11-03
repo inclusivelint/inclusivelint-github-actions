@@ -11,15 +11,7 @@ There are two optional files the users could add to extend inclusivelint functio
 1. additionalwords
 1. inclusivelintignore
 
-These files should be placed in the `/inclusivelint` folder in the root of the project.
-
-### additionalwords
-
-`additionalwords` will add new words to the current dictionary, so the users could include their own words to be checked in the project.
-
-### inclusivelintignore
-
-`inclusivelintignore` will ignore words in the `inclusivelint` dictionary as per user request.
+If any of these files are used, set the path to them in the `main.yml` as per the examples below.
 
 ## Using it as part of the pipeline (private action)
 
@@ -40,6 +32,10 @@ jobs:
       - name: Run inclusivelint
         uses: ./
         id: inclusivelint
+        with:
+          additional_words: 'inclusivelint/additionalwords'
+          ignore_words: 'inclusivelint/inclusivelintignore'
+
 ```
 
 The yaml show how its like to run on a ubuntu machine every time a code is push to the
@@ -65,6 +61,9 @@ jobs:
 
       - name: Run inclusivelint from Marketplace
         uses: 'inclusivelint/inclusivelint-github-actions@0.0.1'
+        with:
+          additional_words: 'inclusivelint/additionalwords'
+          ignore_words: 'inclusivelint/inclusivelintignore'
 ```
 
 In this case, the yaml is using the public action from github marketplace. It runs
