@@ -7,10 +7,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
+
       - name: Run inclusivelint
         uses: ./
         id: inclusivelint
+        with:
+          additional_words: 'inclusivelint/additionalwords'
+          ignore_words: 'inclusivelint/inclusivelintignore'
 
       - name: Run inclusivelint from Marketplace
         uses: 'inclusivelint/inclusivelint-github-actions@0.0.1'
+        with:
+          additional_words: 'inclusivelint/additionalwords'
+          ignore_words: 'inclusivelint/inclusivelintignore'

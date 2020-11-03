@@ -3,6 +3,17 @@ description: 'Github action that finds non inclusive words on a repository'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args: 
+    - ${{ inputs.additional_words }}
+    - ${{ inputs.ignore_words }}
+
 branding:
     icon: 'check'
     color: 'blue'
+inputs:
+  additional_words:
+    description: 'file with additional words to be considered by the linter'
+    required: false
+  ignore_words:
+    description: 'file with words to be ignored by the linter'
+    required: false
