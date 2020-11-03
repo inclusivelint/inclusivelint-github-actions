@@ -6,10 +6,12 @@ runs:
   args: 
     - ${{ inputs.additional_words }}
     - ${{ inputs.ignore_words }}
+    - export TERM=xterm
 
 branding:
     icon: 'check'
     color: 'blue'
+
 inputs:
   additional_words:
     description: 'file with additional words to be considered by the linter'
