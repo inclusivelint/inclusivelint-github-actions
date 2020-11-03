@@ -14,9 +14,13 @@ jobs:
         with:
           additional_words: 'inclusivelint/additionalwords'
           ignore_words: 'inclusivelint/inclusivelintignore'
+        env: 
+          TERM: xterm
 
       - name: Run inclusivelint from Marketplace
         uses: 'inclusivelint/inclusivelint-github-actions@0.0.1'
         with:
           additional_words: 'inclusivelint/additionalwords'
           ignore_words: 'inclusivelint/inclusivelintignore'
+        env: 
+          TERM: xterm
