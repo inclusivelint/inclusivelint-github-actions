@@ -12,7 +12,7 @@ jobs:
         uses: ./
         id: inclusivelint
         with:
-          additional_words: 'inclusivelint/additionalwords'
+          additional_words: 'inclusivelint1/additionalwords'
           ignore_words: 'inclusivelint/inclusivelintignore'
 
       - name: Run inclusivelint from Marketplace
