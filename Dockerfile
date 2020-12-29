@@ -3,11 +3,11 @@ FROM debian:jessie
 RUN apt-get update && \
     apt-get install -y git && \
     apt-get install -y wget && \
-    apt-get install -y node && \
+    curl -sL https://deb.nodesource.com/setup_15.x | bash - && \
+    apt-get install -y nodejs && \
     apt-get install -y npm && \
     npm install -g inclusivelint
 
-RUN ln -s /usr/bin/nodejs /usr/bin/node
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
