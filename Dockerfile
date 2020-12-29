@@ -1,11 +1,6 @@
-FROM debian:jessie
+FROM node:10.22.0-jessie
 
-RUN apt-get update && \
-    apt-get install -y git && \
-    apt-get install -y wget && \
-    wget https://github.com/inclusivelint/inclusivelint/releases/download/0.0.5/install.sh -O- | tr -d '\r' >install.sh && \
-    chmod +x ./install.sh && \
-    ./install.sh
+RUN npm install -g inclusivelint
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
