@@ -5,9 +5,9 @@ RUN apt-get update && \
     apt-get install -y wget && \
     apt-get install -y node && \
     apt-get install -y npm && \
-    npm install -g inclusivelint && \
-    ln -s /usr/bin/nodejs /usr/bin/node
+    npm install -g inclusivelint
 
+RUN ln -s /usr/bin/nodejs /usr/bin/node
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
