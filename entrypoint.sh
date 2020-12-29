@@ -1,3 +1,3 @@
 #!/bin/bash
 
-inclusivelint $GITHUB_WORKSPACE
+inclusivelint -r -p $GITHUB_WORKSPACE
