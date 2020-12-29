@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get install -y wget && \
     apt-get install -y node && \
     apt-get install -y npm && \
-    npm install inclusivelint
+    npm install -g inclusivelint
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
